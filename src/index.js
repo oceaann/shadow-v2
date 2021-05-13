@@ -4,3 +4,4 @@ client.connect()
 module.exports = client
 
 require("./handlers/modules")
+require("./database/connection")
