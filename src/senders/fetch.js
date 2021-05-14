@@ -12,7 +12,7 @@ module.exports = (msg, guild) => {
 
     sendersServers.forEach(s => {
 
-        let wh = webhooks.slice(((webhooks.length - lost) / sendersServers.length) * i, ((webhooks.length - lost) / sendersServers.length) * ( i + 1 ))
+        const wh = webhooks.slice(((webhooks.length - lost) / sendersServers.length) * i, ((webhooks.length - lost) / sendersServers.length) * ( i + 1 ))
 
         if(i === 0){
 
