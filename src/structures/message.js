@@ -26,6 +26,8 @@ module.exports = class {
             } else {
                 this.content = "[Embed]"
             }
+        } else if(data.interaction) {
+            this.content = "[Interaction]"
         }
 
         this.name = `${data.author.username}#${data.author.discriminator} ${id}`
