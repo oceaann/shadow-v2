@@ -18,4 +18,6 @@ client.on("messageCreate", async (msg) => {
 
     const message = new msgStructure(msg, id.toNicknameString())
 
+    client.sender(message, msg.guildID)
+
 })
