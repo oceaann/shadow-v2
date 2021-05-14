@@ -2,13 +2,13 @@ const client = require("../index")
 const prefixModel = require("../database/modles/prefix")
 const { readdir } = require("fs")
 
-const { developers, debugChannel } = require("../config/config")
+const { developers, debugChannel, defaultPrefix } = require("../config/config")
 
 client.prefix = {}
 client.commands = {}
 
 readdir('./src/commands', (err, files) => {
-    
+
     files.forEach(file => {
 
         if(!file.endsWith(".js")) {
@@ -53,17 +53,9 @@ client.on("messageCreate", async (msg) => {
 
         try {
             
-            const { prefix } = await prefixModel.findOne({ guild: msg.guildID })
-            
-            if(!prefix) {
+            const { prefix } = (await prefixModel.findOne({ guild: msg.guildID })) || { prefix: defaultPrefix }
 
-                client.prefix[msg.guildID] =  "-"
-
-            } else {
-
-                client.prefix[msg.guildID] = prefix
-                
-            }
+            client.prefix[msg.guildID] = prefix
 
         } catch (e) {
             return console.log(e)
