@@ -15,4 +15,6 @@ require("./database/connection")
 
 if(senderMode === 1) {
     client.sender = require("./senders/single")
+} else if(senderMode === 2) {
+    client.sender = require("./senders/fetch")
 }

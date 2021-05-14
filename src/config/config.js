@@ -9,7 +9,10 @@ module.exports = {
     prefixLengthLimit: 20,
     defaultPrefix: "-",
 
-    senderMode: 1, // 1- single, 2 - fetch, 3 - websocket
+    senderMode: 2, // 1- single, 2 - fetch, 3 - websocket
+    sendersServers: [], // only for sender mode 2 
+    fetchAuthorization: "", // only for sender mode 2 
+
 
     TOKEN: process.env.TOKEN, // DISCORD-BOT-TOKEN
     URL: process.env.URL // MONGODB-URL
