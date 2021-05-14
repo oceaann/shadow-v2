@@ -16,7 +16,7 @@ module.exports = class {
             id = await this.fetch()
         }
 
-        if(!id) {
+        if((id === null) || (id === undefined)) {
             throw "Unable to fetch/create user in database"
         }
         
