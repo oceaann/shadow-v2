@@ -3,6 +3,7 @@ config()
 module.exports = {
 
     inviteContent: "Jestem idiotą i staram się wysłac zaproszenie :)",
+    allowedBots: ["719434143460753488", "752514883316219914", "810280511192432642", "793933879576756225"],
     developers: ["494386855974928386"],
     debugChannel: "778351902919753790",
     prefixLengthLimit: 20,

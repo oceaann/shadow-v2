@@ -4,6 +4,9 @@ client.connect()
 module.exports = client
 
 client.debug = false
+client.gchannels = []
+client.ids = {}
+client.mutes = []
 
 require("./handlers/modules")
 require("./handlers/commands")
