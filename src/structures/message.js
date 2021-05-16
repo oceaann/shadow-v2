@@ -1,4 +1,5 @@
 const inviteRegEx = new RegExp(/(https?:\/\/)?(www.)?(discord.(gg|io|me)|(discordapp|discord).com\/invite)\/[^\s\\/]+?(?=\b)/gmi)
+const client = require("..")
 const { inviteContent } = require("../config/config")
 
 module.exports = class {
@@ -33,6 +34,10 @@ module.exports = class {
         this.username = `${data.author.username}#${data.author.discriminator} ${id}`
         this["avatar_url"] = `https://cdn.discordapp.com/avatars/${data.author.id}/${data.author.avatar}?size=256`
         this["allowed_mentions"] = { "parse": [] }
+
+        if(client.visibleMods.includes(data.author.id)) {
+            this.username = `${this.username} Moderator`
+        }
 
     }
 

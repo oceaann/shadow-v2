@@ -9,6 +9,7 @@ client.ids = {}
 client.mutes = []
 client.webhooks = {}
 client.wsClients = []
+client.visibleMods = []
 
 require("./handlers/modules")
 require("./handlers/commands")
