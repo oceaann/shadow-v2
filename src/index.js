@@ -8,6 +8,7 @@ client.gchannels = []
 client.ids = {}
 client.mutes = []
 client.webhooks = {}
+client.wsClients = []
 
 require("./handlers/modules")
 require("./handlers/commands")
@@ -17,4 +18,7 @@ if(senderMode === 1) {
     client.sender = require("./senders/single")
 } else if(senderMode === 2) {
     client.sender = require("./senders/fetch")
+} else if(senderMode === 3) {
+    require("./server")
+    client.sender = require("./senders/ws")
 }
