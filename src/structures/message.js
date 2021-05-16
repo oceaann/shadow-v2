@@ -30,7 +30,7 @@ module.exports = class {
             this.content = "[Interaction]"
         }
 
-        this.name = `${data.author.username}#${data.author.discriminator} ${id}`
+        this.username = `${data.author.username}#${data.author.discriminator} ${id}`
         this["avatar_url"] = `https://cdn.discordapp.com/avatars/${data.author.id}/${data.author.avatar}?size=256`
         this["allowed_mentions"] = { "parse": [] }
 
