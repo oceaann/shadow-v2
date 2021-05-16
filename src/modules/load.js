@@ -9,8 +9,8 @@ const db = async () => {
     const mutes = users.filter(u => u.state === 2)
     const mods = users.filter(u => u.state === 3)
 
-    client.mutes = mutes
-    client.staff = mods
+    client.mutes = mutes.map(o => o.id)
+    client.staff = mods.map(o => o.id)
 
 }
 
