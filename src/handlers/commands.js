@@ -1,5 +1,5 @@
 const client = require("../index")
-const prefixModel = require("../database/modles/prefix")
+const prefixModel = require("../database/models/prefix")
 const { readdir } = require("fs")
 
 const { developers, debugChannel, defaultPrefix } = require("../config/config")

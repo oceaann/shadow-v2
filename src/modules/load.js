@@ -1,4 +1,4 @@
-const userStateModel = require("../database/modles/state")
+const userStateModel = require("../database/models/state")
 
 const client = require("../index")
 

@@ -1,5 +1,5 @@
 const { prefixLengthLimit } = require("../config/config")
-const prefixModel = require("../database/modles/prefix")
+const prefixModel = require("../database/models/prefix")
 const client = require("../index")
 
 module.exports = class cmd {

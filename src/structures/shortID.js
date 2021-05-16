@@ -1,4 +1,4 @@
-const userModel = require("../database/modles/user")
+const userModel = require("../database/models/user")
 const client = require("../index")
 
 module.exports = class {
