@@ -74,6 +74,7 @@ client.on("messageCreate", async (msg) => {
     if(!cmd) return
 
     if(cmd.developerOnly && (!developers.includes(msg.author.id))) return
+    if(cmd.moderatorOnly && (!client.staff.includes(msg.author.id))) return console.log(client.staff)
 
     if(cmd.permissions) {
         for(const permission of cmd.permissions) {
