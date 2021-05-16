@@ -4,11 +4,11 @@ const stateSchema = new Schema({
 
     state: {
         type: "number",
-        required: true,
+        required: true
     },
 
     id: {
-        type: "number",
+        type: "string",
         required: true,
         unique: true
     }
