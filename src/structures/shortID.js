@@ -41,7 +41,7 @@ module.exports = class {
     async create() {
 
         const new_id = await userModel.countDocuments().exec()
-        userModel.insertMany([{user: this.userID, id: new_id}])
+        userModel.create({user: this.userID, id: new_id})
 
         client.ids[this.userID] = new_id
         return new_id

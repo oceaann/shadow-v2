@@ -18,7 +18,7 @@ module.exports = class cmd {
     
         if(prefix_update.n < 1) {
     
-            await prefixModel.insertMany([{ guild: msg.guildID, prefix: args[0] }])
+            await prefixModel.create({ guild: msg.guildID, prefix: args[0] })
     
         }
 
