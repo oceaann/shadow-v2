@@ -21,11 +21,9 @@ module.exports = class cmd {
                     limit: Number(args[0])
                 })
 
-                const messages = m.map(m => m.id)
-
-                console.log(messages)
-
                 if(!m) return
+
+                const messages = m.map(m => m.id)
 
                 await client.deleteMessages(
                     ch,
