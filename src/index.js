@@ -4,6 +4,7 @@ client.connect()
 module.exports = client
 
 client.debug = false
+client.lock = false
 client.gchannels = []
 client.ids = {}
 client.mutes = []
