@@ -7,7 +7,7 @@ client.on("messageCreate", async (msg) => {
 
     if(!client.gchannels.includes(msg.channel.id)) return
 
-    if(client.lock) return
+    if(client.lock && (!client.staff.includes(msg.author.id))) return
 
     if(msg.author.webhookID) return
 
